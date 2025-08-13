@@ -1,5 +1,3 @@
-!pip install bcrypt
-
 import sqlite3
 import gradio as gr
 import pandas as pd
