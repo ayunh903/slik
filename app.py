@@ -794,9 +794,17 @@ with gr.Blocks(
         with gr.Row():
             with gr.Column(scale=1):
                 inp_files_debitur = gr.File(label="", file_count="multiple", file_types=[".txt"])
+                gr.Markdown(
+                    "Tip: If there is no output, make sure you have selected the correct file with the <code>.txt</code> extension.",
+                    elem_classes="small-text"
+                )
                 tombol_proses_debitur = gr.Button("Process", variant="primary")
             with gr.Column(scale=1):
                 output_file_debitur = gr.File(label="Download", file_types=[".xlsx"])
+                gr.Markdown(
+                    "Note: Click the file size <code> KB</code> to the right of the file name to download.",
+                    elem_classes="small-text"
+                )
                 clear_btn_debitur = gr.Button("Clear Data", variant="secondary")
 
         output_df_debitur = gr.Dataframe(label="Preview", elem_id="preview-table", wrap=False)
@@ -814,9 +822,17 @@ with gr.Blocks(
         with gr.Row():
             with gr.Column(scale=1):
                 inp_files_karyawan = gr.File(label="", file_count="multiple", file_types=[".txt"])
+                gr.Markdown(
+                    "Tip: If there is no output, make sure you have selected the correct file with the <code>.txt</code> extension.",
+                    elem_classes="small-text"
+                )
                 tombol_proses_karyawan = gr.Button("Process", variant="primary")
             with gr.Column(scale=1):
                 output_file_karyawan = gr.File(label="Download", file_types=[".xlsx"])
+                gr.Markdown(
+                    "Note: Click the file size <code> KB</code> to the right of the file name to download.",
+                    elem_classes="small-text"
+                )
                 clear_btn_karyawan = gr.Button("Clear Data", variant="secondary")
 
         output_df_karyawan = gr.Dataframe(label="Preview", elem_id="preview-table", wrap=False)
